@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/jquery.mobile.custom.structure.css" /> 
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+	<link rel="stylesheet" href="css/b4e.css" /> 
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+	<div data-role="panel" id="mypanel" data-display="overlay" data-position="right" >
+   		<a href="#my-header" data-rel="close"  class="close-panel"></a>
+        <ul class="menu">
+            <li><a href="">Acceuil</a></li>
+            <li><a href="">Hip-Hop</a></li>
+            <li><a href="">Break</a></li>
+            <li><a href="">Popin</a></li>
+            <li><a href="">House</a></li>
+            <li><a href="">Contactez-nous</a></li>
+        </ul>
+	<div data-role="header" >
+		<h1>B4E</h1>
+		<a href="#mypanel" class="link-panel ui-btn-right" ></a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content liste-event">
+
+<ul data-role="listview" data-inset="true" class="liste" >
+    <li >
+    	<a href="#" >
+    		<img src="css/img/test1.jpg">
+        	<h2>battle sg</h2>
+        	<p>date : 02 avril 2015 </p>
+        	<p>	lieux : paris (75) </p>
+    	</a>
+    </li>
+    <li >
+    	<a href="#" >
+    		<img src="css/img/test1.jpg">
+    		<h2>battle sg</h2>
+    		<p>
+    			<span>date :</span> 02 avril 2015 <br/>
+    			<span>lieux :</span> paris (75)
+    		</p>
+    	</a>
+    </li>
+    
+</ul>
+	</div><!-- /content -->
+	<div data-role="footer">
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+</body>
+</html>

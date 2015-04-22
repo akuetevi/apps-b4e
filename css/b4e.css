@@ -1,0 +1,374 @@
+/*
+* APPS B4E v1.0 beta
+* 
+* akuetevi edmond
+* 
+*/
+/*
+*
+*         0.rest
+*
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+
+@font-face {
+  font-family: 'Steiner';
+  src: url('fonts/steiner/Steiner.eot') format('embedded-opentype');
+  src: url('fonts/steiner/Steiner.ttf') format('truetype');
+  src: url('fonts/steiner/Steiner.svg#Steiner') format('svg');
+  src: url('fonts/steiner/Steiner.woff') ;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/avenir/AvenirNext-UltraLight.eot');
+  src: url('fonts/avenir/AvenirNext-UltraLight.eot?#iefix') format('embedded-opentype'),
+       url('fonts/avenir/AvenirNext-UltraLight.woff2') format('woff2'),
+       url('fonts/avenir/AvenirNext-UltraLight.woff') format('woff'),
+       url('fonts/avenir/AvenirNext-UltraLight.ttf') format('truetype'),
+       url('fonts/avenir/AvenirNext-UltraLight.svg#AvenirNext-UltraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 2000px) {
+  body {
+    display:none;
+  }
+}
+
+
+/*
+*
+*         1.general
+*
+*/
+#mypanel {
+	background-color: #fff;
+}
+.close-panel{
+	background-image: url(img/cross.png);
+	background-size:15px 15px ;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+}
+.menu{
+	text-align: center;
+	font-family: 'avenir';
+	font-size:20px; 
+	margin-top: 20%;
+}
+.menu li {
+	padding:10px 5px;
+}
+.menu li a {
+	padding:10px 5px;
+	color: #000;
+}
+.insta {
+	background-image: url(img/insta.png);
+	background-size:60px 60px ;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
+	height: 60px;
+}
+.facebook {
+	background-image: url(img/facebook.png);
+	background-size:60px 60px ;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
+	height: 60px;
+
+}
+.tweet {
+	background-image: url(img/tweet.png);
+	background-size:60px 60px ;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
+	height: 60px;
+
+}
+.ui-content, .ui-listview, ul.ui-listview{
+	padding: 0;
+	margin: 0;
+}
+.ui-content, .ui-page{
+	width: 100%;
+	height: 100%;
+}
+
+.ui-page{
+	overflow: none;
+}
+
+.ui-content{
+	overflow: scroll;
+	/*padding-top: 12.5%;*/
+	position: absolute;
+	top:40px ;
+	left: 0;
+}
+
+
+
+/*
+*
+*         2.header
+*
+*/
+.ui-header {
+	background-color: #333;
+	color: #fff;
+	border-top: none;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.link-panel {
+	background-image: url(img/dot.png);
+	background-size:30px 6px ;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 6px;
+	right: 0;
+	margin-top: 15px!important;
+	background-position: center;
+	
+}
+
+
+
+
+/*
+*
+*         3.Home
+*
+*/
+.liste-home{
+	width: 100%;
+	height: 100%;
+}
+ul.liste-home li{
+	width: 100%;
+	height: 25%;
+	border-bottom: 1px solid #fff;
+}
+ul.liste-home li a{
+	padding: 19%;
+}
+ul.liste-home li a {
+	margin: 0 ;
+	text-transform: uppercase;
+	font-family: "Steiner";
+	color:#fff;
+	font-size: 24px;
+
+}
+
+#break {
+	background-image: url(img/break.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+}
+#house {
+	background-image: url(img/house.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+}
+#pop {
+	background-image: url(img/pop.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+}
+#hiphop {
+	background-image: url(img/hiphop.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+}
+
+.ui-li-count {
+	position: absolute;
+	font-size: 12.5px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 .48em;
+	line-height: 1.6em;
+	min-height: 1.6em;
+	min-width: .64em;
+	right: .8em;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	bottom: 8px;
+	color: #000;
+	background-color: #fff;
+
+}
+/*
+*
+*         4.liste
+*
+*/
+.liste-event {
+	background-image: url(img/fond-liste.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.liste li{
+	border-bottom: 1px solid #fff;
+	background-image: url(img/next.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+.liste li a {
+	padding: 1.5em;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.liste li a img {
+	position: absolute;
+	left: 0;
+	top:10px;
+	max-height: 5em;
+	max-width: 5em;
+}
+
+.liste li a h2{
+	display: block;
+	margin: .45em  0;
+	font-family:'Steiner'
+}
+.liste li a p{
+	font-family:'Avenir';
+	font-size: 14px;
+}
+
+/*
+*
+*         5.event
+*
+*/
+
+.event {
+	background-image: url(img/fond-event.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow:scroll;
+	color:rgba(255,255,255,0.9);
+	font-family: 'avenir';
+	font-size: 14px;
+	height: 100%;
+}
+
+.bloc-info {
+	background-color: rgba(0,0,0,0.2);
+	margin: 10px;
+}
+
+.bloc-info img {
+	margin:10px;
+	display: inline-block;
+}
+.info {
+	width:50%;
+	display: inline-block;
+	text-align: center;
+	top: 25px;
+	position: absolute;
+}
+.info h1 {
+	font-family: 'steiner';
+	text-transform: uppercase;
+	font-size: 19px;
+	margin: 5px;
+}
+.info p {
+	margin:5px;
+}
+.fb {
+	background-image: url(img/fb.png);
+	background-repeat: no-repeat;
+	background-size: 30px 30px ;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	right: -20px;
+}
+
+
+.bloc-content {
+	background-color: rgba(0,0,0,0.2);
+	display: block; 
+	width: 90%;
+	height:auto;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+.bloc-content p {
+	width: 90%;
+	padding-top: 10px;
+	margin: 0 auto;
+}
+
+
+
